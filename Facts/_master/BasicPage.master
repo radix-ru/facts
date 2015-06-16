@@ -1,0 +1,17 @@
+<%@ Master Inherits="Facts.BasicPage" %>
+<%@ Register Src="~/_ascx/Head.ascx" TagPrefix="uc" TagName="Head" %>
+<%@ Register Src="~/_ascx/SidePanel.ascx" TagPrefix="uc" TagName="SidePanel" %>
+
+<!DOCTYPE html>
+<html>
+	<uc:Head Id="Head" runat="server" />
+	<body>
+		<uc:SidePanel runat="server" />
+		<div id="MainArea">
+			<header id="TitleArea">
+				<h1><%= Head.PageSpecificTitle %></h1>
+			</header>
+			<asp:ContentPlaceHolder Id="PageContent" runat="server" /> 
+		</div>
+	</body>
+</html>

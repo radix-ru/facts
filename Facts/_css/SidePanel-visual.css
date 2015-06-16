@@ -1,0 +1,40 @@
+#SidePanel {
+	background-color: hsl(60, 100%, 80%);
+}
+
+#SidePanel a {
+	background-color: hsl(60, 90%, 70%);
+	text-decoration: none;
+	color: inherit;
+	font-family: sans-serif;
+}
+
+#SidePanel a:hover {
+	background-color: hsl(60, 100%, 70%);
+}
+
+#SidePanel hr {
+	border-color: hsl(60, 100%, 50%);
+}
+
+#iSearch {
+	background: url(magnifyingglass.png) no-repeat;
+}
+
+#GotoMainPage {
+	background-color: hsl(60, 90%, 70%);
+}
+
+#GotoMainPage:hover {
+	background-color: hsl(60, 100%, 70%);
+}
+
+#SidePanelToggle {
+	background-color: red;
+	cursor: w-resize;
+	-moz-user-select: none;
+}
+
+.collapsed #SidePanelToggle {
+	cursor: e-resize;
+}

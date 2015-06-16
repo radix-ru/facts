@@ -1,0 +1,51 @@
+#SidePanel {
+	min-height: 350px;
+	height: 100%;
+	padding: 5px;
+	flex-direction: column;
+	box-sizing: padding-box;
+	flex-shrink: 0;
+	flex-grow: 0;
+	font-family: sans-serif;
+}
+
+#NavPane > * {
+	margin-bottom: 5px;
+}
+
+#NavPane a:not(#GotoUpdates) {
+	display: block;
+}
+
+#Logo {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#GotoLogout, #GotoSettings {
+	padding: 2px;
+}
+
+#LogoutImg, #SettingsImg {
+}
+
+#SearchField {
+	width: 100%;
+}
+
+#Footer > * {
+	margin-top: 5px;
+}
+
+#Footer a {
+	display: block;
+}
+
+#SidePanelToggle {
+	position: absolute;
+	left: 100%;
+	flex-grow: 0;
+	flex-shrink: 0;
+	flex-basis: 0;
+	top: 0;
+}

@@ -1,0 +1,27 @@
+#NavPane a {
+	text-align: center;
+	font-size: larger;
+}
+
+#LogoDiv {
+	text-align: center;
+}
+
+#UserName {
+	text-align: center;
+}
+
+#Footer a {
+	text-align: center;
+	font-size: larger;
+}
+
+#Copyright {
+	text-align: center;
+	font-size: 10px;
+}
+
+#CurrentDateTime {
+	text-align: center;
+	font-size: 9px;
+}

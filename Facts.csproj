@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>12.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7CAC16F3-73AD-49CC-A559-71BB4A75BA85}</ProjectGuid>
+    <ProjectTypeGuids>{349C5851-65DF-11DA-9384-00065B846F21};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Facts</RootNamespace>
+    <AssemblyName>Facts</AssemblyName>
+    <BaseDirectory>Facts</BaseDirectory>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Facts\bin</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Facts\bin</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Web" />
+    <Reference Include="MySql.Data, Version=6.4.3.0, Culture=neutral, PublicKeyToken=20449f9ba87f7ae2">
+      <Private>False</Private>
+      <Package>mysql-connector-net</Package>
+    </Reference>
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties VerifyCodeBehindFields="True" VerifyCodeBehindEvents="True">
+        <XspParameters Port="8080" Address="127.0.0.1" SslMode="None" SslProtocol="Default" KeyType="None" CertFile="" KeyFile="" PasswordOptions="None" Password="" Verbose="True" />
+        <WebDeployTargets>
+          <Target Name="">
+            <FileCopier Handler="MonoDevelop.Deployment.LocalFileCopyHandler" TargetDirectory="/mnt/ramdisk/facts" ctype="LocalFileCopyConfiguration" />
+          </Target>
+        </WebDeployTargets>
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+  <ItemGroup>
+    <Content Include="Facts\Default.aspx" />
+    <Content Include="Facts\Web.config" />
+    <Content Include="Facts\login.aspx" />
+    <Content Include="Facts\signup.aspx" />
+    <Content Include="Facts\_ascx\Head.ascx" />
+    <Content Include="Facts\_ascx\MessageSubTree.ascx" />
+    <Content Include="Facts\_ascx\SidePanel.ascx" />
+    <Content Include="Facts\_css\MainArea-login-page.css" />
+    <Content Include="Facts\_css\MainArea-signup-page.css" />
+    <Content Include="Facts\_css\MainArea-thread.css" />
+    <Content Include="Facts\_css\MainArea.css" />
+    <Content Include="Facts\_css\SidePanel-physical.css" />
+    <Content Include="Facts\_css\SidePanel-text.css" />
+    <Content Include="Facts\_css\SidePanel-visual.css" />
+    <Content Include="Facts\_css\styles.css" />
+    <Content Include="Facts\_img\logo.png" />
+    <Content Include="Facts\_img\logout.png" />
+    <Content Include="Facts\_img\magnifyingglass.png" />
+    <Content Include="Facts\_img\settings.png" />
+    <Content Include="Facts\_js\content.js" />
+    <Content Include="Facts\_js\reply.js" />
+    <Content Include="Facts\_js\script.js" />
+    <Content Include="Facts\_master\BasicPage.master" />
+    <Content Include="Facts\threads\Default.aspx" />
+    <Content Include="Facts\threads\new.aspx" />
+    <Content Include="Facts\threads\thread.aspx" />
+    <Content Include="Facts\users\Default.aspx" />
+    <Content Include="Facts\users\user.aspx" />
+    <Content Include="Facts\_ascx\ReplyForm.ascx" />
+    <Content Include="Facts\Global.asax" />
+    <Content Include="Facts\error_pages\400.aspx" />
+    <Content Include="Facts\error_pages\401.aspx" />
+    <Content Include="Facts\error_pages\403.aspx" />
+    <Content Include="Facts\error_pages\500.aspx" />
+    <Content Include="Facts\error_pages\404.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Facts\_img\logo.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Facts\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Facts\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Facts\signup.aspx.cs">
+      <DependentUpon>signup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Facts\signup.aspx.designer.cs">
+      <DependentUpon>signup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Facts\_ascx\Head.ascx.cs">
+      <DependentUpon>Head.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Facts\_ascx\Head.ascx.designer.cs">
+      <DependentUpon>Head.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Facts\_ascx\MessageSubTree.ascx.cs">
+      <DependentUpon>MessageSubTree.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Facts\_ascx\MessageSubTree.ascx.designer.cs">
+      <DependentUpon>MessageSubTree.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Facts\_ascx\SidePanel.ascx.cs">
+      <DependentUpon>SidePanel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Facts\_ascx\SidePanel.ascx.designer.cs">
+      <DependentUpon>SidePanel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Facts\_master\BasicPage.master.cs">
+      <DependentUpon>BasicPage.master</DependentUpon>
+    </Compile>
+    <Compile Include="Facts\_master\BasicPage.master.designer.cs">
+      <DependentUpon>BasicPage.master</DependentUpon>
+    </Compile>
+    <Compile Include="Facts\app_code\BasePage.cs" />
+    <Compile Include="Facts\app_code\Message.cs" />
+    <Compile Include="Facts\threads\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Facts\threads\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Facts\threads\new.aspx.cs">
+      <DependentUpon>new.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Facts\threads\new.aspx.designer.cs">
+      <DependentUpon>new.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Facts\threads\thread.aspx.cs">
+      <DependentUpon>thread.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Facts\threads\thread.aspx.designer.cs">
+      <DependentUpon>thread.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Facts\users\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Facts\users\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Facts\users\user.aspx.cs">
+      <DependentUpon>user.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Facts\users\user.aspx.designer.cs">
+      <DependentUpon>user.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Facts\app_code\User.cs" />
+    <Compile Include="Facts\app_code\Thread.cs" />
+    <Compile Include="Facts\_ascx\ReplyForm.ascx.cs">
+      <DependentUpon>ReplyForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Facts\_ascx\ReplyForm.ascx.designer.cs">
+      <DependentUpon>ReplyForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Facts\app_code\Security.cs" />
+    <Compile Include="Facts\app_code\Todos.cs" />
+    <Compile Include="Facts\Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Facts\app_code\MyDebug.cs" />
+    <Compile Include="Facts\app_code\SignUpChecker.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Facts\error_pages\" />
+  </ItemGroup>
+</Project>

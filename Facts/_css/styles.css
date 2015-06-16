@@ -1,0 +1,48 @@
+body {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+.flexbox {
+	display: flex;
+	justify-content: space-between;
+}
+
+.centered {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+.hor5spacer {
+	width: 5px;
+}
+
+hr {
+	margin: 0;
+}
+
+.hfb > *:not(.hor5spacer) {
+	display: block;
+	flex-grow: 1;
+	flex-basis: 0;
+}
+
+#Title > h1 {
+	margin: 0;
+}
+
+#Threads, #Users {
+	border: 1px solid black;
+}
+
+#Threads td, #Threads th, #Users td, #Users th {
+	border: 1px solid black;
+}
